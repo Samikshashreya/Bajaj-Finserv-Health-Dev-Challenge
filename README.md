@@ -17,8 +17,7 @@ BFHL Frontend is a React application designed to submit and process JSON data. U
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/Samikshashreya/Bajaj-Finserv-Health-Dev-Challenge.git
    ```
 2. **Install Dependencies**
    
