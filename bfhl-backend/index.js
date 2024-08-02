@@ -8,8 +8,8 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(cors({
   origin: '*', // Allow all origins
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these methods
-  allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.post('/bfhl', (req, res) => {
