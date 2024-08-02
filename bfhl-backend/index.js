@@ -6,7 +6,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these methods
+  allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
+}));
 
 app.post('/bfhl', (req, res) => {
   const { data } = req.body;
@@ -47,4 +51,7 @@ app.get('/bfhl', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
+});
+app.get('/api/bfhl', (req, res) => {
+  res.json({ message: 'Hello from API' });
 });
